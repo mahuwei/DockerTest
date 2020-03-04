@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  webapiserver:
+    image: ${DOCKER_REGISTRY-}webapiserver
+    build:
+      context: .
+      dockerfile: WebApiServer/Dockerfile
+
+  idserver:
+    image: ${DOCKER_REGISTRY-}idserver
+    build:
+      context: .
+      dockerfile: IdServer/Dockerfile
